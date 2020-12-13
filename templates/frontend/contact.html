@@ -2,102 +2,104 @@
 {% load static %}
 <!DOCTYPE html>
 {% block title %}
-Contact Us
+Contact
 {% endblock %}
-
 {% block content %}
-<section id="sectionTitle">
-<div class="pageTitle">
-  <h1>Contact</h1>
-</div>
-</section>
-<!-- END OF PAGE TITLE -->
-<section id="content">
-<div class="row">
-  <div class="col-sm-9 text-center" id="mainContent">
-    <div class="row">
-      <div class="col-sm-12">
-        <form action="#" class="form" method="post" enctype="multipart/form-data">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="labelName">Name</label>
-                <input type="text" name="name" id="labelName" placeholder="Your Name" class="form-control">
-              </div>
-            </div>
-            <!-- END OF NAME -->
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="labelPhone">Phone No</label>
-                <input type="text" name="phoneNo" id="labelPhone" placeholder="Your Phone" class="form-control">
-              </div>
-            </div>
-            <!-- END OF PHONE -->
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="labelEmail">Email</label>
-                <input type="text" name="subject" id="labelEmail" class="form-control" placeholder="Your Email">
-              </div>
-            </div>
-            <!-- END OF EMAIL -->
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="labelReferer">Referer</label>
-                <select id="labelReferer" class="form-control" name="referer">
-                  <option value="Facebook">Facebook</option>
-                  <option value="Twitter">Twitter</option>
-                  <option value="Instagram">Instagram</option>
-                  <option value="Nairaland">Nairaland</option>
-                  <option value="" selected>Please Choose</option>
-                </select>
-              </div>
-            </div>
-            <!-- END OF REFERER -->
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <label>Gender</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <label>
-                  <input type="radio" name="gender" value="Male">
-                  Male
-                </label>
-                <label>
-                  <input type="radio" name="gender" value="Female">
-                  Female
-                </label>
-              </div>
-            </div>
-          </div>
-          <!-- END OF GENDER -->
-          
-          <!-- FILE UPLOAD -->
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <label>Upload File</label>
-                <input type="file" name="upload" class="form-control">
-              </div>
-            </div>
-          </div>
-          <!-- END OF FILE UPLOAD -->
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <label for="labelMessage">Message</label>
-                <textarea name="message" id="labelMessage" class="form-control"> </textarea>
-              </div>
-            </div>
-            <input type="submit" name="send" value="Send" class="btn btn-primary">
-          </div>
-        </form>
-      </div>
-    </div>
-    
-  </div>
+ <!-- SITE BLOG STARTS HERE -->
+ <div class="row">
+  <div class="col-md-8 col-sm-8">
+     <div class="contactPage">
+        <h2>Contact Us</h2>
+         <div class="row">
+           <div class="col-md-5 col-sm-4 col-xs-12">
+             <ul class="list-unstyled">
+               <li>
+                 <span class="fa fa-map-marker"></span>
+                 <span class="emphasis">No 12, Olu Akerele Street, Ikeja lagos</span>
+               </li>
+               <li>
+                 <span class="fa fa-envelope"></span>
+                 <span class="emphasis">info@alabiansolutions.com</span>
+               </li>
+               <li>
+                 <span class="fa fa-envelope"></span>
+                 <span class="emphasis">uwazie.benedict@alabiansolutions.com</span>
+               </li>
+               <li>
+                 <span class="fa fa-phone"></span>
+                 <span class="emphasis">08157550744</span>
+               </li>
+               <li>
+                 <span class="fa fa-phone"></span>
+                 <span class="emphasis">08034265103</span>
+               </li>
+             </ul>
+           </div>
+           <div class="col-md-7 col-sm-8 col-xs-12">
+             <form action="process.php" class="form-horizontal" id="contactForm">
+               <div class="form-group">
+                 <label class="col-md-3 col-sm-5 col-xs-12 control-label">Name</label>
+                 <div class="col-md-9 col-sm-7 col-xs-12">
+                   <input type="text" placeholder="Surname Name" class="form-control">
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-sm-5 col-xs-12 control-label">Phone</label>
+                 <div class="col-md-9 col-sm-7 col-xs-12">
+                   <input type="text" placeholder="08157550744" class="form-control">
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-sm-5 col-xs-12 control-label">Email</label>
+                 <div class="col-md-9 col-sm-7 col-xs-12">
+                   <input type="text" placeholder="youremail@domain.com" class="form-control">
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-sm-3 col-xs-12 control-label">Message</label>
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <textarea placeholder="Message" class="form-control">
+                   </textarea>
+                 </div>
+               </div>
+               <button type="button" class="btn btn-info pull-right">Submit</button>
+             </form>
+             
+           </div>
+         </div>
+     </div>
+   
   
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="widget">
+      <h3>Categories</h3>
+      <ul class="nav">
+        <li><a href="#">Sports <span class="badge pull-right">7</span></a></li>
+        <li><a href="#">Politics <span class="badge pull-right">10</span></a></li>
+        <li><a href="#">Entertainment <span class="badge pull-right">5</span></a></li>
+        <li><a href="#">User <span class="badge pull-right">4</span></a></li>
+      </ul>
+    </div>
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+         <form class="form-inline">
+         <input class="form-control mr-sm-8" type="text" placeholder="Search">
+         <button class="btn btn-success" type="submit">Search</button>
+     </form>
+    </nav>
+    <div class="widget">
+      <h3>Email Subscribtion</h3>
+      <form class="form">
+        <div class="form-group">
+          <input type="text" name="email" class="form-control" placeholder="Enter Email">
+        </div>
+        <input type="submit" name="submit" class="btn btn-default btn-block">
+      </form>
+    </div>
+  </div>
 </div>
-</section>
+<!-- SITE BLOG ENDS HERE -->
+</div>
+
 {% endblock %}
+         

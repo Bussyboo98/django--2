@@ -1,0 +1,188 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block title %}
+product-detail
+{% endblock %}
+{% block content %}
+<!-- SITE BLOG STARTS HERE -->
+<div class="row">
+  <div class="col-md-8 col-sm-8">
+     <div class="row">
+      <div class="col-sm-5 single-blog">
+        <img src="{% static 'frontend/images/phone1.jpg' %}" class="img-thumbnail img-responsive">
+      </div>
+      <div class="col-sm-7">
+        <div class="blog-content">
+          <h2>Phone 1</h2>
+          <h4>Prize: &#8358; 50,000</h4>
+          <h4>Prize: <del>&#8358; 65,000</del></h4>
+          <p>
+           Time:8:30am, Category:<a href="sport.html">Phone.</a>. 
+           
+         </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsa natus, vel non earum, distinctio iusto reprehenderit alias quisquam possimus, at qui nostrum ad enim totam repudiandae consectetur eius iste?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsa natus, vel non earum, distinctio iusto reprehenderit alias quisquam possimus, at qui nostrum ad enim totam repudiandae consectetur eius iste?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsa natus, vel non earum, distinctio iusto reprehenderit alias quisquam possimus, at qui nostrum ad enim totam repudiandae consectetur eius iste?
+          </p>
+          <from class="form" action="#" method="post">
+            <div class="form-group">
+              <label>Fullname</label>
+              <input type="text" class="form-control" name="fullname" placeholder="Enter Fullname">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" name="email" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="text" class="form-control" name="phone" placeholder="Enter Phone">
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <textarea name="address" class="form-control" cols="30" rows="10"></textarea>
+            </div>
+            <input type="submit" class="btn btn-success" value="Submit">
+          </from>
+        </div>
+        
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-sm-12">
+        <div class="blog-content">
+          <h2>Related Products</h2>
+        </div>
+      </div>
+       <div class="col-md-4 col-sm-6">
+         <div class="thumbnail">
+           <img src="{% static 'frontend/images/phone4.jpg' %}">
+         </div>
+         <div class="blog-content">
+            <p>
+             Time:8:30am, Category:<a href="sport.html">laptops.</a>. 
+             Posted By: <a href="#">Alabi</a>.
+             
+           </p>
+           <h2>Phone 4</h2>
+           <h2>Prize: &#8358; 60,000 </h2>
+           <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse harum perferendis, dolorum dicta non, eos. Aliquid voluptate qui quo! Omnis ex modi expedita natus et eum aut excepturi facere!
+           </p>
+           <a href="product-detail.html" class="btn btn-success">Readmore</a>
+         </div>
+       </div>
+       <div class="col-md-4 col-sm-6">
+         <div class="thumbnail">
+           <img src="{% static 'frontend/images/phone2.jpg' %}">
+         </div>
+         <div class="blog-content">
+            <p>
+             Time:8:30am, Category:<a href="sport.html">laptops.</a>. 
+             Posted By: <a href="#">Alabi</a>.
+             
+           </p>
+           <h2>Phone 2</h2>
+           <h2>Prize: &#8358; 60,000 </h2>
+           <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse harum perferendis, dolorum dicta non, eos. Aliquid voluptate qui quo! Omnis ex modi expedita natus et eum aut excepturi facere!
+           </p>
+           <a href="product-detail.html" class="btn btn-success">Readmore</a>
+         </div>
+       </div>
+       <div class="col-md-4 col-sm-6">
+         <div class="thumbnail">
+           <img src="{% static 'frontend/images/phone3.jpg' %}">
+         </div>
+         <div class="blog-content">
+            <p>
+             Time:8:30am, Category:<a href="sport.html">laptops.</a>. 
+             Posted By: <a href="#">Alabi</a>.
+             
+           </p>
+           <h2>Phone 3</h2>
+           <h2>Prize: &#8358; 60,000 </h2>
+           <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse harum perferendis, dolorum dicta non, eos. Aliquid voluptate qui quo! Omnis ex modi expedita natus et eum aut excepturi facere!
+           </p>
+           <a href="product-detail.html" class="btn btn-success">Readmore</a>
+         </div>
+       </div>
+     </div>
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="widget">
+      <h3>Product Categories</h3>
+      <ul class="nav">
+        <li><a href="#">Phones <span class="badge pull-right">7</span></a></li>
+        <li><a href="#">Electronics <span class="badge pull-right">10</span></a></li>
+        <li><a href="#">Laptops <span class="badge pull-right">5</span></a></li>
+        <li><a href="#">Shirts <span class="badge pull-right">4</span></a></li>
+        <li><a href="#">Flat Screens <span class="badge pull-right">15</span></a></li>
+      </ul>
+    </div>
+    <div class="widget">
+      <h3>Recent Producst</h3>
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="{% static 'frontend/images/laptop1.jpg' %}" class="img-responsive" alt="">
+        </div>
+        <div class="col-sm-9">
+          <h5>Laptop 1  &#8358;65,000</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="{% static 'frontend/images/laptop2.jpg' %}" class="img-responsive" alt="">
+        </div>
+        <div class="col-sm-9">
+          <h5>Laptop 2  &#8358;65,000</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="{% static 'frontend/images/phone3.jpg' %}" class="img-responsive" alt="">
+        </div>
+        <div class="col-sm-9">
+          <h5>Phone 3  &#8358;65,000</h5>
+        </div>
+      </div>
+    </div>
+       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+         <form class="form-inline">
+         <input class="form-control mr-sm-8" type="text" placeholder="Search">
+         <button class="btn btn-success" type="submit">Search</button>
+     </form>
+    </nav>
+    <div class="widget">
+      <h3>Email Subscribtion</h3>
+      <form class="form">
+        <div class="form-group">
+          <input type="text" name="email" class="form-control" placeholder="Enter Email">
+        </div>
+        <input type="submit" name="submit" class="btn btn-default btn-block">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- SITE BLOG ENDS HERE -->
+</div>
+<!-- END OF MAIN CONTENT -->
+
+</div>
+</div>
+
+
+
+
+         
+   
+          
+{% endblock %}
+
+   
+      
+
+    
+   

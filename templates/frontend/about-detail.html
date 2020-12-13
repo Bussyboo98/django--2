@@ -1,0 +1,38 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+<!Doctype html>
+{% block title %}
+Detail
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-8 col-sm-8">
+     <div class="row">
+       <div class="blog-content">
+         <div class="col-sm-12 single-blog">
+          {% if det %}
+           <img src="{{ det.profile_imd }}" class="img-thumbnail img-responsive">
+         </div>
+         <div class="col-sm-12">
+           <h2>{{ det.name }}</h2>
+           <p>
+            {{ det.content }}
+           </p>
+         </div>
+         {% endif %}
+       </div>
+     </div>
+   
+  
+
+
+{% endblock %}
+
+  
+
+
+
+
+    
+   

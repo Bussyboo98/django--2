@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 class UserProfile(models.Model):
     age = models.PositiveIntegerField()
     website = models.URLField(blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.username
 
 class Category(models.Model):
     cat_name = models.CharField(max_length=100, verbose_name='Category Name')
@@ -12,12 +16,64 @@ class Category(models.Model):
 
     def __str__(self):
         return self.cat_name
+    
+    class Meta():
+        verbose_name_plural = 'Post Category'
+
+    
+
+
 
 
 class Post(models.Model):
-    pst_title = models.CharField(max_length=150)
+    pst_title = models.CharField(max_length=150, verbose_name='Post Title')
     pst_image = models.FileField(null=True, blank=True, upload_to='uploads/')
     content = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    cat_id = models.ManyToManyField(Category)
+    cat_id = models.ManyToManyField(Category, verbose_name='Category')
     date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.pst_title
+
+    class Meta():
+        verbose_name_plural = 'Post'
+
+
+class About(models.Model):
+      profile = models.FileField(null=True, blank=True, upload_to='uploads/')
+      name = models.CharField(max_length=150)
+      content = models.TextField()
+
+      def __str__(self):
+            return self.name
+
+      class Meta():
+            verbose_name_plural = 'About'
+
+
+
+      def profile_img(self):
+          if self.profile:
+              return self.profile.url
+
+
+class Products(models.Model):
+      profile = models.FileField(null=True, blank=True, upload_to='uploads/')
+      name = models.CharField(max_length=150)
+      content = models.TextField()
+      price =  models.PositiveIntegerField()
+
+      def __str__(self):
+            return self.name
+
+      class Meta():
+            verbose_name_plural = 'products'
+
+
+
+      def profile_img(self):
+          if self.profile:
+              return self.profile.url
+            
+            
