@@ -7,7 +7,8 @@ def index(request):
     return  render(request,'frontend/index.html')
 
 def phone(request):
-    return  render(request,'frontend/product-list1.html')
+    products=Products.objects.all()
+    return  render(request,'frontend/product-list1.html',{'phn':products})
 
 def laptop(request):
     return  render(request,'frontend/product-list2.html')
@@ -22,7 +23,11 @@ def about(request):
 
 def about_detail(request, abt_id):
     detail = About.objects.get(id = abt_id)
-    return render(request, 'frontened/detail.html',{'det':detail})
+    return render(request, 'frontened/about-detail.html',{'det':detail})
+
+def product_detail(request, phn_id):
+    detail = Products.objects.get(id = phn_id)
+    return render(request, 'frontened/product-detail.html',{'phn':detail})
 
 
 
